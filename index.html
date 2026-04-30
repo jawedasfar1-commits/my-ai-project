@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AbyssAI | Deep Sea Intelligence</title>
-  <meta name="description" content="AbyssAI is a deep-sea themed AI chat assistant for math, coding, and school help." />
+  <title>StarAI | Celestial Intelligence</title>
+  <meta name="description" content="StarAI is a space-themed AI chat assistant for math, coding, and school help." />
 
   <style>
     :root {
@@ -136,6 +136,16 @@
       color: var(--water-glow);
       background: transparent;
       cursor: pointer;
+    }
+
+    .attribution {
+        margin-top: 10px;
+        font-size: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--muted);
+        opacity: 0.8;
     }
 
     #main {
@@ -316,10 +326,10 @@
 <body>
   <aside id="sidebar">
     <div class="brand">
-      <div class="logo">A</div>
+      <div class="logo">S</div>
       <div>
-        <h1>AbyssAI</h1>
-        <p class="muted">Deep Sea Intelligence</p>
+        <h1>StarAI</h1>
+        <p class="muted">Celestial Intelligence</p>
       </div>
     </div>
 
@@ -338,12 +348,15 @@
     </div>
 
     <button id="clearBtn">Clear Chat</button>
+    <div class="attribution">
+        MADE BY MUDASSIR JAWED SON OF ASFAR JAWED AND GRANDSON OF MANZAR AHSAN
+    </div>
   </aside>
 
   <main id="main">
     <section id="chatbox">
       <div class="welcome" id="welcome">
-        <h2>AbyssAI</h2>
+        <h2>StarAI</h2>
         <p class="muted">Ask a question, solve a problem, debug code, or get help studying.</p>
 
         <div class="prompts">
@@ -434,7 +447,7 @@
       } catch (error) {
         console.error(error);
         setStatus("OFFLINE", "The model could not load in this browser.", 0);
-        addMsg("AbyssAI could not start. WebLLM needs WebGPU support and enough memory.", "bot error");
+        addMsg("StarAI could not start. WebLLM needs WebGPU support and enough memory.", "bot error");
       }
     }
 
@@ -457,7 +470,7 @@
       const chatMessages = [
         {
           role: "system",
-          content: "You are AbyssAI, a wise and helpful deep-sea themed assistant. Give clear, correct help with school, math, coding, and general questions."
+          content: "You are StarAI, a wise and helpful celestial-themed assistant. Give clear, correct help with school, math, coding, and general questions."
         },
         ...messages.slice(-12)
       ];
@@ -557,4 +570,3 @@
   </script>
 </body>
 </html>
-
